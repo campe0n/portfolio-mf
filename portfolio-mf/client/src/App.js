@@ -1,13 +1,16 @@
 import './App.css';
 import Nav from './components/Nav';
-import {BrowserRouter as Router } from 'react-router-dom';
+import Home from './components/Home';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
     <Router>
     <section>
       <Nav />
-      <h1>My first react app</h1>
+      <Switch>
+        <Route path='/' exact component={Home} />
+      </Switch>
     </section>
     </Router>
   );
